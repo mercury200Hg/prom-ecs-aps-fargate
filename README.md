@@ -44,5 +44,4 @@ Follow the following steps -
 
 
 ### How to Cleanup
-Run the following -
-1. 
+See cleanup/README.md 
