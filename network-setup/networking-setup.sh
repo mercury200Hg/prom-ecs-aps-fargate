@@ -3,6 +3,8 @@ aws cloudformation create-stack --stack-name $NETWORK_STACK_NAME \
     --capabilities CAPABILITY_NAMED_IAM \
     --region ${AWS_REGION}
 
+echo "Waiting for 180 seconds for the operation to complete"
+sleep 180;
 
 # Export the vpc id
 export VPC_ID=$(aws cloudformation describe-stacks \

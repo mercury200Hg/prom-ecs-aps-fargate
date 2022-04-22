@@ -9,6 +9,14 @@ This repository contains sample application which can be used as reference to de
 - For more details on how to use this project kindly refer - https://medium.com/
 
 
+### Pre-requisite
+```
+- awscli version >= 1.22.97
+- AWS credentials loaded (either via ENV variable or in $HOME/.aws/credentials file)
+```
+
+
+### How to use ?
 Follow the following steps -
 1. Setup environment
   - ``` source set_env.sh ```
@@ -29,7 +37,12 @@ Follow the following steps -
     - ``` source set_aws_system_params.sh ```
 8. Create Task Definitions for your ECS. In case you wish to modify the same, do the changes to **webappTaskDefinition.json.template**. This is the place where you can replace your application definition and prometheus params like CPU/Memory
   - ``` source task-definitions.sh ```
-8. Finally create services for your TaskDefinitions to launch them.
+9. Finally create services for your TaskDefinitions to launch them.
   - ``` source services.sh ```
-9. If you have set **ECS_PROMETHEUS_PUBLIC_IP_ENABLED** to **ENABLED**, then visit it's running task details in ECS cluster to get the public IP.
+10. If you have set **ECS_PROMETHEUS_PUBLIC_IP_ENABLED** to **ENABLED**, then visit it's running task details in ECS cluster to get the public IP.
    You shall be able to access prometheus on port **9090** with this on that IP.
+
+
+### How to Cleanup
+Run the following -
+1. 
